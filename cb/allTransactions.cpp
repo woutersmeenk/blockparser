@@ -74,7 +74,6 @@ struct AllTransactions:public Callback
         fwrite(&bTime, sizeof(uint64_t), 1, stdout);
 
         fwrite(pubKeyHash.v, sizeof(uint8_t), kRIPEMD160ByteSize, stdout); 
-        //showHex(pubKeyHash.v, kRIPEMD160ByteSize, false);
 
         const uint8_t *hash = downTXHash ? downTXHash : txHash;  
         fwrite(hash, sizeof(uint8_t), kSHA256ByteSize, stdout);
