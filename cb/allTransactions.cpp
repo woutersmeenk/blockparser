@@ -15,12 +15,11 @@
 enum  optionIndex { kUnknown };
 static const option::Descriptor usageDescriptor[] =
 {
-    { kUnknown, 0, "",    "", option::Arg::None, "\n" },
+    { kUnknown, 0, "",    "", option::Arg::None, "\n\n        dump all transactions in binary format." },
     { 0,        0,  0,     0,                 0,                                          0 }
 };
 
 static uint8_t emptyKey[kRIPEMD160ByteSize] = { 0x52 };
-typedef GoogMap<Hash160, int, Hash160Hasher, Hash160Equal>::Map AddrMap;
 
 struct AllTransactions:public Callback
 {
